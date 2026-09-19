@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 330px;
+  font-family: system-ui, 'Microsoft YaHei', sans-serif;
+  font-size: 13px;
+  color: #1f2329;
+}
+
+.popup {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.popup-header h1 {
+  font-size: 15px;
+  flex: 1;
+}
+
+.logo {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #254ec7, #4f7cff);
+  position: relative;
+}
+.logo::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  top: 5px;
+  height: 2px;
+  border-radius: 1px;
+  background: #fff;
+  box-shadow: 0 5px 0 #fff, 0 10px 0 #78d2ff;
+}
+
+.link {
+  border: none;
+  background: none;
+  color: #4f7cff;
+  cursor: pointer;
+  font-size: 12px;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.field span {
+  color: #646a73;
+  white-space: nowrap;
+}
+.field select {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #d5d9e0;
+  border-radius: 6px;
+  font-size: 13px;
+  background: #fff;
+}
+
+.primary {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #4f7cff;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.primary:hover:not(:disabled) {
+  background: #3b6ae8;
+}
+.primary:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.secondary {
+  padding: 9px;
+  border: 1px solid #bcd0ff;
+  border-radius: 8px;
+  background: #f5f8ff;
+  color: #2b5cd9;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.secondary:hover:not(:disabled) {
+  background: #eaf1ff;
+}
+.secondary:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.notice {
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #fff7e6;
+  color: #ad6800;
+  line-height: 1.5;
+}
+
+.result {
+  border-radius: 8px;
+  padding: 10px;
+  background: #f5f8ff;
+  line-height: 1.6;
+}
+.result .ok b {
+  color: #2e7d32;
+}
+.result.error {
+  background: #fdeeee;
+  color: #c0392b;
+}
+.result details {
+  margin-top: 4px;
+}
+.result summary {
+  cursor: pointer;
+  color: #646a73;
+  font-size: 12px;
+}
+.result ul {
+  margin: 6px 0 0 16px;
+  color: #ad4e4e;
+}
+.warn {
+  color: #ad6800;
+}
